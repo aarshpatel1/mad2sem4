@@ -1,0 +1,30 @@
+<!-- Implement jQuery chaining to slide up a <div>, change its background color, and then slide it down when a button is clicked. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Chaining Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#actionBtn").click(function () {
+                $("#myDiv")
+                    .slideUp(500)  // Slide up the div
+                    .css("background-color", "yellow")  // Change background color
+                    .slideDown(500);  // Slide down the div
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="actionBtn">Click Me</button>
+
+    <div id="myDiv" style="width: 300px; height: 100px; background-color: lightblue; margin-top: 20px;">
+        This is a sliding div!
+    </div>
+
+</body>
+
+</html>

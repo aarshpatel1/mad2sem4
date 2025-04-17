@@ -1,0 +1,28 @@
+<!-- Implement a keypress() event in jQuery that displays the typed text inside an input field (<input type="text">) in a <span> element in real time -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Keypress Event Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input[type='text']").keypress(function () {
+                let currentText = $(this).val();
+                $("#output").text(currentText + String.fromCharCode(event.which));
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="Type something...">
+    <p>You typed: <span id="output"></span></p>
+</body>
+
+</html>
+
+<!-- optional -->
+<!-- $("input[type='text']").on("input", function () {
+    $("#output").text($(this).val());
+}); -->

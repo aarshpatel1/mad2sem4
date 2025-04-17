@@ -1,0 +1,28 @@
+<!-- Use jQuery's before() and after() methods to insert a new paragraph before and after a <div> when a button is clicked. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Insert Paragraphs Before and After</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#insertBtn").click(function () {
+                $("div").before("<p>This paragraph is inserted before the div.</p>");
+                $("div").after("<p>This paragraph is inserted after the div.</p>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="insertBtn">Insert Paragraphs</button>
+
+    <div>
+        <p>This is a div element.</p>
+    </div>
+
+</body>
+
+</html>

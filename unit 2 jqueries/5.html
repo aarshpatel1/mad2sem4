@@ -1,0 +1,33 @@
+<!-- Write a script using append() and prepend() methods to dynamically add new list items to an unordered list <ul>. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Append and Prepend List Items</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#appendBtn").click(function () {
+                $("ul").append("<li>Appended Item</li>");
+            });
+
+            $("#prependBtn").click(function () {
+                $("ul").prepend("<li>Prepended Item</li>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="appendBtn">Append Item</button>
+    <button id="prependBtn">Prepend Item</button>
+
+    <ul>
+        <li>Existing Item 1</li>
+        <li>Existing Item 2</li>
+    </ul>
+
+</body>
+
+</html>

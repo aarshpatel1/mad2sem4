@@ -1,0 +1,36 @@
+<!-- Create a fade-in and fade-out effect on an image when a user hovers over it using jQuery. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fade In/Out Image on Hover</title>
+    <style>
+        img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("img").hover(
+                function () {
+                    // Mouse enters
+                    $(this).fadeTo("fast", 0.3);
+                },
+                function () {
+                    // Mouse leaves
+                    $(this).fadeTo("fast", 1.0);
+                }
+            );
+        });
+    </script>
+</head>
+
+<body>
+
+    <img src="https://picsum.photos/536/354" alt="Sample Image">
+
+</body>
+
+</html>

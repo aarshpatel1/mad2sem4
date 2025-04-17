@@ -1,0 +1,20 @@
+<!-- Write a jQuery script to change the text color of all <p> elements to red when the document is fully loaded -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Paragraph Color</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").css("color", "red");
+        });
+    </script>
+</head>
+
+<body>
+    <p>This is a paragraph.</p>
+    <p>Another paragraph here.</p>
+</body>
+
+</html>

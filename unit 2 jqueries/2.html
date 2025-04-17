@@ -1,0 +1,25 @@
+<!--Use jQuery selectors to hide all elements with the class .hidden-content when a button with the ID #hideBtn is clicked. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hide Hidden Content</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hideBtn").click(function () {
+                $(".hidden-content").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="hideBtn">Hide Content</button>
+
+    <div class="hidden-content">This is some hidden content 1.</div>
+    <div class="hidden-content">This is some hidden content 2.</div>
+    <p>This paragraph will remain visible.</p>
+</body>
+
+</html>

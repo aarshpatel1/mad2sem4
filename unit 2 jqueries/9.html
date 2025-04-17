@@ -1,0 +1,35 @@
+<!-- Change the background color of a <div> dynamically when a dropdown (<select>) value is changed using the change () event. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Background Color</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#colorSelect").change(function () {
+                var selectedColor = $(this).val();
+                $("#colorDiv").css("background-color", selectedColor);
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <label for="colorSelect">Choose a background color:</label>
+    <select id="colorSelect">
+        <option value="">Select a color</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+    </select>
+
+    <div id="colorDiv" style="width: 300px; height: 100px; margin-top: 20px;">
+        This is a div with dynamic background color.
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!-- Write a jQuery function that removes all elements with the class .delete-item when a delete button is clicked. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Items</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#deleteBtn").click(function () {
+                $(".delete-item").remove();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="deleteBtn">Delete Items</button>
+
+    <div class="delete-item">Item 1</div>
+    <div class="delete-item">Item 2</div>
+    <div class="delete-item">Item 3</div>
+
+</body>
+
+</html>
