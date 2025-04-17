@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous API Request</title>
+</head>
+
+<body>
+    <h1>Asynchronous API Request Example</h1>
+    <button id="fetchDataButton">Fetch Data</button>
+    <p id="dataDisplay"></p> <!-- Placeholder to display fetched data -->
+
+    <script>
+        // Event listener for the button click
+        document.getElementById("fetchDataButton").addEventListener("click", fetchData);
+
+        // Function to fetch data asynchronously
+        async function fetchData() {
+            // Clear any previous data
+            document.getElementById("dataDisplay").innerText = "Loading...";
+
+            try {
+                // Make the API request
+                let response = await fetch("https://jsonplaceholder.typicode.com/posts/1"); // Example API
+
+                // Check if the request was successful
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+
+                // Parse the JSON response
+                let data = await response.json();
+
+                // Update the webpage with the received data
+                document.getElementById("dataDisplay").innerText = `Title: ${data.title}\n\nBody: ${data.body}`;
+            } catch (error) {
+                // Handle errors (e.g., network failure)
+                document.getElementById("dataDisplay").innerText = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

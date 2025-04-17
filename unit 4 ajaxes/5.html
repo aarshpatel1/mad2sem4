@@ -1,0 +1,59 @@
+<!-- Use setRequestHeader() to send custom headers with an AJAX request, such as setting a content type or authentication token. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX with Custom Headers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>AJAX Request with Custom Headers</h2>
+    <button id="sendRequest">Send Request</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("sendRequest").addEventListener("click", function () {
+            const xhr = new XMLHttpRequest();
+
+            // Open the request
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+
+            // Set custom headers
+            xhr.setRequestHeader("Content-Type", "application/json"); // Standard content type
+            xhr.setRequestHeader("Authorization", "Bearer YOUR_FAKE_TOKEN_123"); // Example token
+
+            // On success
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    document.getElementById("output").textContent = "Response:\n" + xhr.responseText;
+                } else {
+                    document.getElementById("output").textContent = "Request failed with status: " + xhr.status;
+                }
+            };
+
+            // On error
+            xhr.onerror = function () {
+                document.getElementById("output").textContent = "Network error.";
+            };
+
+            // Send request
+            xhr.send();
+        });
+    </script>
+
+</body>
+
+</html>

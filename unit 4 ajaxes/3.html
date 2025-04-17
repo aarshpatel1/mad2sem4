@@ -1,0 +1,68 @@
+<!-- Write a script that listens to the onreadystatechange event and updates the UI with the readyState changes of an XMLHttpRequest. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest ReadyState Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>XMLHttpRequest readyState Tracker</h2>
+    <button onclick="makeRequest()">Start Request</button>
+
+    <ul id="stateList"></ul>
+
+    <script>
+        function makeRequest() {
+            const xhr = new XMLHttpRequest();
+            const list = document.getElementById("stateList");
+            list.innerHTML = ""; // Clear previous entries
+
+            xhr.onreadystatechange = function () {
+                const states = [
+                    "0: UNSENT (Request not initialized)",
+                    "1: OPENED (Server connection established)",
+                    "2: HEADERS_RECEIVED (Request received)",
+                    "3: LOADING (Processing request)",
+                    "4: DONE (Request finished and response is ready)"
+                ];
+
+                const currentState = `readyState: ${xhr.readyState} - ${states[xhr.readyState] || "Unknown"}`;
+                const li = document.createElement("li");
+                li.textContent = currentState;
+                list.appendChild(li);
+
+                // Optionally show response when done
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const responseLi = document.createElement("li");
+                    responseLi.textContent = "Response: " + xhr.responseText;
+                    list.appendChild(responseLi);
+                }
+            };
+
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+            xhr.send();
+        }
+    </script>
+
+</body>
+
+</html>
