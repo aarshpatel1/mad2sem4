@@ -1,0 +1,19 @@
+<!-- Write an XML document with a proper declaration and a root element <company>, containing child elements <employee> with attributes for id and department. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+    <employee id="E101" department="Finance">
+        <name>Alice Johnson</name>
+        <position>Accountant</position>
+        <salary>55000</salary>
+    </employee>
+    <employee id="E102" department="IT">
+        <name>Bob Smith</name>
+        <position>Software Developer</position>
+        <salary>70000</salary>
+    </employee>
+    <employee id="E103" department="HR">
+        <name>Clara Davis</name>
+        <position>HR Manager</position>
+        <salary>60000</salary>
+    </employee>
+</company>

@@ -1,0 +1,19 @@
+<!-- Create an XML document for an online store, where each <product> element includes name, category, and price. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<store>
+    <product>
+        <name>Wireless Mouse</name>
+        <category>Electronics</category>
+        <price>25.99</price>
+    </product>
+    <product>
+        <name>Cotton T-Shirt</name>
+        <category>Clothing</category>
+        <price>15.00</price>
+    </product>
+    <product>
+        <name>Ceramic Coffee Mug</name>
+        <category>Home & Kitchen</category>
+        <price>9.49</price>
+    </product>
+</store>

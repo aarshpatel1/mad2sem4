@@ -1,0 +1,19 @@
+<!-- Define an XML document for a university database that contains multiple <student> elements with nested <name>, <age>, and <course> fields. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<university>
+    <student>
+        <name>Rahul Sharma</name>
+        <age>21</age>
+        <course>Computer Science</course>
+    </student>
+    <student>
+        <name>Anjali Verma</name>
+        <age>22</age>
+        <course>Electrical Engineering</course>
+    </student>
+    <student>
+        <name>Vikram Patel</name>
+        <age>20</age>
+        <course>Mechanical Engineering</course>
+    </student>
+</university>

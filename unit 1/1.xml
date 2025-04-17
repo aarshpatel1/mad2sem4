@@ -1,0 +1,19 @@
+<!-- Create an XML document to store information about three books with elements for Title, Author, and Price.  -->
+<?xml version="1.0" encoding="UTF-8"?>
+<Library>
+    <Book>
+        <Title>The Great Gatsby</Title>
+        <Author>F. Scott Fitzgerald</Author>
+        <Price>10.99</Price>
+    </Book>
+    <Book>
+        <Title>1984</Title>
+        <Author>George Orwell</Author>
+        <Price>8.99</Price>
+    </Book>
+    <Book>
+        <Title>To Kill a Mockingbird</Title>
+        <Author>Harper Lee</Author>
+        <Price>12.50</Price>
+    </Book>
+</Library>

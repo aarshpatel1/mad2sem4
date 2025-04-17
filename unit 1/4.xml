@@ -1,0 +1,19 @@
+<!-- Write an XML document to store movie details, where each <movie> element contains a title, director, and release Year. Ensure that the XML follows correct syntax. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+    <movie>
+        <title>Inception</title>
+        <director>Christopher Nolan</director>
+        <releaseYear>2010</releaseYear>
+    </movie>
+    <movie>
+        <title>Parasite</title>
+        <director>Bong Joon-ho</director>
+        <releaseYear>2019</releaseYear>
+    </movie>
+    <movie>
+        <title>The Godfather</title>
+        <director>Francis Ford Coppola</director>
+        <releaseYear>1972</releaseYear>
+    </movie>
+</movies>
