@@ -1,0 +1,13 @@
+// Convert the following XML data into a JSON object:
+// <book>
+//  <title>JavaScript Basics</title>
+//  <author>John Doe</author>
+//  <price>25.99</price>
+// </book>
+{
+    "book": {
+        "title": "JavaScript Basics",
+        "author": "John Doe",
+        "price": 25.99
+    }
+}

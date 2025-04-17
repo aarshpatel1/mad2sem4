@@ -1,0 +1,6 @@
+// Create a simple JSON object representing a student with properties: name, age, and grade.
+{
+    "name": "John Doe",
+    "age": 20,
+    "grade": "A"
+}

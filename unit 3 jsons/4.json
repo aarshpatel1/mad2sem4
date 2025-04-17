@@ -1,0 +1,5 @@
+// Create a JSON array containing numbers representing the temperatures recorded over a week
+{
+    "temperatures": [22, 24, 19, 21, 23, 25, 20]
+}
+  

@@ -1,0 +1,5 @@
+// Write a JSON object that contains an array of strings representing a list of favourite programming languages.
+{
+    "favorite_languages": ["Python", "JavaScript", "Java", "C++", "Ruby"]
+}
+  
